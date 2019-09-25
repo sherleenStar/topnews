@@ -1,11 +1,14 @@
 <template>
   <el-container>
-      <el-aside>
-          <layoutAside></layoutAside>
+
+      <el-aside style="width:200px; background-color:#323745">
+          <layout-aside style="overflow:hidden"></layout-aside>
       </el-aside>
       <el-container>
-          <el-header>头部</el-header>
-          <el-main>
+          <el-header>
+            <layout-header></layout-header>
+          </el-header>
+          <el-main class="main">
               <router-view></router-view>
           </el-main>
       </el-container>
@@ -13,15 +16,14 @@
 </template>
 
 <script>
-import layoutAside from '../../components/home/layout-aside'
+
 export default {
-  components: {
-    'layoutAside': layoutAside
-  }
 
 }
 </script>
 
-<style>
-
+<style lang='less' scoped>
+.main {
+  padding: 0;
+}
 </style>
